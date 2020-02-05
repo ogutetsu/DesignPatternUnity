@@ -12,7 +12,26 @@ public class PerformJump : Command
 {
     public override void Execute(Animator anim)
     {
+        //実際は、jumpアニメではなく適当なアニメが割り当てられている
         anim.SetTrigger("jump");
+    }
+}
+
+public class PerformKick : Command
+{
+    public override void Execute(Animator anim)
+    {
+        //実際は、kickアニメではなく適当なアニメが割り当てられている
+        anim.SetTrigger("kick");
+    }
+}
+
+public class PerformPunch : Command
+{
+    public override void Execute(Animator anim)
+    {
+        //実際は、punchアニメではなく適当なアニメが割り当てられている
+        anim.SetTrigger("punch");
     }
 }
 

@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
             transform.Rotate(0, rotation, 0);
         }
 
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetTrigger("jump");
