@@ -123,4 +123,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropped: {fileID: 11400000, guid: b157a0b373898c64781df7479a0405c6, type: 2}
+  pickup: {fileID: 11400000, guid: 13042f85a2d4eef43b5946b931496026, type: 2}
   icon: {fileID: 8956579561791417065, guid: 26bfc4c84d1fdd54da4b0e1ea5c114a8, type: 3}
