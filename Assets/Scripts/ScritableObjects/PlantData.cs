@@ -11,6 +11,19 @@ public class PlantData : ScriptableObject
    [SerializeField] private THREAT plantThreat;
    [SerializeField] private Texture icon;
 
+    public string Name
+    {
+        get { return plantName; }
+    }
 
+    public THREAT Threat
+    {
+        get { return plantThreat; }
+    }
+
+    public Texture Icon
+    {
+        get { return icon; }
+    }
 
 }
