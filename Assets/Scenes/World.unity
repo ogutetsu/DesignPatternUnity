@@ -1098,12 +1098,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20005f82247f246d4a6a4989974d5dd9, type: 3}
+  m_Script: {fileID: 11500000, guid: 1fe3bcbf747fd4a07b71324c4c21ae71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1792587451}
-  distance: 6
-  height: 4
+  distance: 10
+  height: 5
   lookOffset: {x: 0, y: 1, z: 0}
 --- !u!1 &981162100
 GameObject:
@@ -1919,7 +1919,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2014324178
 RectTransform:
   m_ObjectHideFlags: 0
