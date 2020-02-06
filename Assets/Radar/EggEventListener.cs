@@ -2,10 +2,13 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+[System.Serializable]
+public class UnityGameObjectEvent : UnityEvent<GameObject> { }
+
 public class EggEventListener : MonoBehaviour
 {
     public EggEvent gEvent;
-    public UnityEvent response;
+    public UnityGameObjectEvent response = new UnityGameObjectEvent();
 
     private void OnEnable()
     {
@@ -17,9 +20,9 @@ public class EggEventListener : MonoBehaviour
         gEvent.Unregister(this);
     }
 
-    public void OnEventOccurs()
+    public void OnEventOccurs(GameObject go)
     {
-        response.Invoke();
+        response.Invoke(go);
     }
 
 }

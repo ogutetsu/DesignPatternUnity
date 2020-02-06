@@ -17,11 +17,11 @@ public class EggEvent : ScriptableObject
         elisteners.Remove(listener);
     }
 
-    public void Occurred()
+    public void Occurred(GameObject go)
     {
         for (int i = 0; i < elisteners.Count; i++)
         {
-            elisteners[i].OnEventOccurs();
+            elisteners[i].OnEventOccurs(go);
         }
     }
 
