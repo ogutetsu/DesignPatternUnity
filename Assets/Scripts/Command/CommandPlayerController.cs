@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class CommandPlayerController : MonoBehaviour
 {
     Animator anim;
     private float speed = 2.0f;
