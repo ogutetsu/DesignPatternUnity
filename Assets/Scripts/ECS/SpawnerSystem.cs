@@ -27,7 +27,7 @@ public class SpawnerSystem : JobComponentSystem
                 {
                     var instance = CommandBuffer.Instantiate(spaner.Prefab);
                     var pos = math.transform(location.Value,
-                        new float3(x, noise.cnoise(new float2(x, z) * 0.21f), z));
+                        new float3(x, noise.cnoise(new float2(x, z) * 0.21f) * 3, z));
                     CommandBuffer.SetComponent(instance, new Translation { Value = pos });
                 }
             }
