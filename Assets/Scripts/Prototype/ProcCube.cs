@@ -6,6 +6,7 @@ public class ProcCube: Object
 {
     public enum Cubeside { BOTTOM, TOP, LEFT, RIGHT, FRONT, BACK };
 
+
     public static void CreateQuad(Cubeside side, GameObject parent)
     {
         Mesh mesh = new Mesh();
@@ -130,7 +131,7 @@ public class ProcCube: Object
 
         cube.GetComponent<MeshFilter>().mesh = new Mesh();
         cube.GetComponent<MeshFilter>().mesh.CombineMeshes(combine);
-        cube.GetComponent<MeshFilter>().mesh.name = "CreatedCube";
+        cube.GetComponent<MeshFilter>().mesh.name = "CreatedCube_" + Time.realtimeSinceStartup.ToString();
         MeshRenderer rend = cube.GetComponent<MeshRenderer>();
         rend.material = new Material(Shader.Find("Holistic/Plasma"));
         cube.AddComponent<Rigidbody>();
