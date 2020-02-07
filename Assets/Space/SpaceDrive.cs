@@ -8,14 +8,16 @@ public class SpaceDrive : MonoBehaviour
     public float speed = 10.0f;
     public GameObject bullet;
     public Slider healthbar;
+    public GameObject explosion;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "asteroid")
         {
-            healthbar.value -= 30;
+            healthbar.value -= 10;
             if (healthbar.value <= 0)
             {
+                Instantiate(explosion, this.transform.position, Quaternion.identity);
                 Destroy(healthbar.gameObject, 0.1f);
                 Destroy(this.gameObject, 0.1f);
             }

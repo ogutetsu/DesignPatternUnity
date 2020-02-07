@@ -374,6 +374,7 @@ MonoBehaviour:
   speed: 10
   bullet: {fileID: 3036999536646533481, guid: fb558214ac930c44f87821123941d965, type: 3}
   healthbar: {fileID: 712368055}
+  explosion: {fileID: 100004, guid: bd5a7ae3e8bd4c8499f69e8e45138021, type: 3}
 --- !u!58 &524252671
 CircleCollider2D:
   m_ObjectHideFlags: 0
