@@ -9,6 +9,19 @@ public class SpaceDrive : MonoBehaviour
     public GameObject bullet;
     public Slider healthbar;
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "asteroid")
+        {
+            healthbar.value -= 30;
+            if (healthbar.value <= 0)
+            {
+                Destroy(healthbar.gameObject, 0.1f);
+                Destroy(this.gameObject, 0.1f);
+            }
+        }
+    }
+
 
     void Update()
     {
