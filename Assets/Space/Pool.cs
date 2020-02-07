@@ -8,8 +8,7 @@ public class PoolItem
 {
     public GameObject prefab;
     public int amount;
-
-
+    public bool expandable;
 }
 
 public class Pool : MonoBehaviour
@@ -33,6 +32,18 @@ public class Pool : MonoBehaviour
                 return pooledItems[i];
             }
         }
+
+        foreach (var item in items)
+        {
+            if (item.prefab.tag == tag && item.expandable)
+            {
+                GameObject obj = Instantiate(item.prefab);
+                obj.SetActive(false);
+                pooledItems.Add(obj);
+                return obj;
+            }
+        }
+
         return null;
     }
 

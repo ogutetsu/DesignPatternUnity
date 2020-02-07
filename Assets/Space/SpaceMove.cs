@@ -10,7 +10,7 @@ public class SpaceMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "asteroid")
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
     }
    
